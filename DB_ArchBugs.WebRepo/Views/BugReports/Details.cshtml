@@ -1,0 +1,75 @@
+﻿@model DB_ArchBugs.Classes.BugReport
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BugReport</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Location.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SeverityType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SeverityType)
+        </dd>
+
+    </dl>
+    <table width="300" class="table table-bordered">
+        <thead>
+            <tr>
+                <th>UserName</th>
+                <th>UserEmail</th>
+                <th></th>
+            </tr>
+        </thead>
+        
+            <tr>
+                <td width="100"> @Html.DisplayFor(model => model.User.Name)</td>
+                <td width="100">@Html.DisplayFor(model => model.User.Email)</td>
+            </tr>
+
+        
+    </table>
+    <hr />
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
